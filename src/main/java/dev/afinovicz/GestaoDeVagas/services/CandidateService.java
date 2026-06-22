@@ -1,4 +1,4 @@
-package dev.afinovicz.GestaoDeVagas.useCases;
+package dev.afinovicz.GestaoDeVagas.services;
 
 import dev.afinovicz.GestaoDeVagas.database.model.CandidateEntity;
 import dev.afinovicz.GestaoDeVagas.database.repository.CandidateRepository;

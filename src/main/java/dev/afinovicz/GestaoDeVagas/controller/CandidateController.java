@@ -1,9 +1,7 @@
 package dev.afinovicz.GestaoDeVagas.controller;
 
 import dev.afinovicz.GestaoDeVagas.database.model.CandidateEntity;
-import dev.afinovicz.GestaoDeVagas.database.repository.CandidateRepository;
-import dev.afinovicz.GestaoDeVagas.exception.UserFoundException;
-import dev.afinovicz.GestaoDeVagas.useCases.CandidateService;
+import dev.afinovicz.GestaoDeVagas.services.CandidateService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
