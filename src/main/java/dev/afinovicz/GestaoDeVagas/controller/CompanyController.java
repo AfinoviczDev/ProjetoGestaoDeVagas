@@ -3,6 +3,7 @@ package dev.afinovicz.GestaoDeVagas.controller;
 import dev.afinovicz.GestaoDeVagas.database.model.CompanyEntity;
 import dev.afinovicz.GestaoDeVagas.exception.UserFoundException;
 import dev.afinovicz.GestaoDeVagas.services.CompanyService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +19,7 @@ public class CompanyController {
     private CompanyService companyService;
 
     @PostMapping("/")
-    public ResponseEntity<Object> createCompany(@RequestBody CompanyEntity companyEntity) {
+    public ResponseEntity<Object> createCompany(@Valid @RequestBody CompanyEntity companyEntity) {
         try {
             var result = companyService.createCompany(companyEntity);
             return ResponseEntity.ok().body(result);
